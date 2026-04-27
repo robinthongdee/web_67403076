@@ -1,0 +1,131 @@
+/* 1. Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* สำคัญมาก: ช่วยให้ padding ไม่ทำให้กล่องขยายเกินจอ */
+}
+
+body {
+  text-align: center;
+  /* ใช้สีฟ้าอ่อนตามรูปที่คุณส่งมาครั้งแรก */
+  background-color: rgb(206, 250, 254); 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* 2. Header (Top Station Design) */
+.header {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  height: auto; /* ให้ยืดตามตัวอักษรได้ */
+  min-height: 80px;
+  font-family: sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+
+  color: #8e44ad; /* สีม่วง */
+  font-size: clamp(24px, 5vw, 45px); /* ตัวอักษรจะเล็กลงเองในมือถือ */
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgb(204, 115, 255);
+
+  background-color: white;   
+  border: 4px dashed #8e44ad; 
+  border-radius: 30px; /* ทรงโค้งมนแบบแคปซูล */
+}
+.name{
+    font-weight: bold;
+    font-size: 30px;
+}
+/* 3. Profile Section */
+.profile-photo img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover; /* กันรูปเบี้ยวถ้าสัดส่วนไม่ใช่จัตุรัส */
+  border-radius: 40px;
+  margin: 30px auto 15px;
+  display: block;
+  /* ลบ background-color สีฟ้าที่เคยติดมาจาก * ออก */
+}
+
+.the-name {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.word-hero {
+  font-size: 16px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 25px;
+  padding: 0 20px;
+}
+
+/* 4. Social Icons (Capsule Design) */
+.parent-container { 
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.icon-wrapper {
+    display: flex;
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.icon-wrapper a {
+    margin: 0 15px;
+    color: #000;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+    display: flex;
+}
+
+.icon-wrapper a:hover {
+    transform: translateY(-3px);
+    color: #8e44ad;
+}
+
+/* 5. Image Grid Section */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.column {
+  flex: 0 1 300px; /* ขนาดรูปพื้นฐาน 300px */
+  font-size: 20px;
+}
+.letter{
+  font-size: 30px;
+    font-weight: bold;
+}
+
+.column img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* 6. Responsive */
+@media (max-width: 768px) {
+    .profile-photo img {
+        width: 180px;
+        height: 180px;
+    }
+    .header {
+        width: 95%;
+        border-width: 3px;
+    }
+}
